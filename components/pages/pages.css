@@ -1,0 +1,125 @@
+:root {
+  --navy: #071b3c;
+  --green: #35c928;
+  --muted: #667085;
+  --line: #e4e9f0;
+}
+
+.siteHeader {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 max(24px, calc((100vw - 1180px) / 2));
+  border-bottom: 1px solid #edf0f4;
+  background: #fff;
+}
+
+.siteBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.siteBrand strong { display: block; font-size: 28px; }
+.siteBrand small { display: block; margin-top: 3px; font-size: 9px; color: var(--muted); }
+.brandMark { width: 32px; height: 38px; border-left: 16px solid transparent; border-right: 16px solid transparent; border-bottom: 34px solid var(--navy); }
+
+.siteNav {
+  display: flex;
+  gap: 22px;
+  margin-left: auto;
+}
+
+.siteNav a, .siteFooter a { color: inherit; text-decoration: none; }
+.siteNav a { font-size: 14px; font-weight: 700; color: #17243b; }
+
+.primaryButton, .outlineButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primaryButton { border: 0; background: var(--green); color: #fff; }
+.outlineButton { border: 1px solid currentColor; color: #fff; }
+.headerButton { flex: 0 0 auto; margin-left: 8px; }
+.pageContent { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+
+.heroSection {
+  min-height: 480px;
+  background: radial-gradient(circle at 78% 48%, #0e4c9c 0, #0b2d63 28%, #071b3c 68%);
+  color: #fff;
+}
+
+.heroGrid {
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: 47% 53%;
+  align-items: center;
+  gap: 20px;
+  padding: 42px 0;
+}
+
+.heroGrid h1 { margin: 0 0 20px; font-size: clamp(42px, 5vw, 58px); line-height: 1.05; }
+.heroGrid h1 span { color: #42d532; }
+.heroGrid p { max-width: 490px; line-height: 1.6; color: #e4ebf8; }
+.heroActions { display: flex; gap: 12px; margin-top: 24px; }
+.heroVisual { display: flex; align-items: center; gap: 10px; height: 280px; }
+.visualCard { height: 220px; flex: 1; display: grid; place-items: center; border-radius: 14px; background: #104d90; font-size: 54px; text-align: center; }
+.visualCard:nth-child(2) { height: 270px; background: #08705f; }
+.visualCard:nth-child(3) { background: #63218f; }
+.visualCard span { font-size: 12px; font-weight: 800; }
+
+.businessSection { padding-block: 38px 58px; }
+.statement { text-align: center; color: var(--navy); font-size: 22px; font-weight: 800; }
+.businessGrid, .featureGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.businessGrid article, .featureGrid article { border: 1px solid var(--line); border-radius: 16px; padding: 24px; background: #fff; }
+.businessGrid h2, .featureGrid h2 { color: var(--navy); }
+.businessGrid p, .featureGrid p { color: var(--muted); line-height: 1.6; }
+.businessGrid a { color: #249d22; font-weight: 800; text-decoration: none; }
+
+.innerPage { min-height: 60vh; padding-block: 70px; }
+.innerPage h1 { margin: 8px 0 16px; color: var(--navy); font-size: 42px; }
+.innerPage > p:not(.eyebrow) { max-width: 700px; color: var(--muted); line-height: 1.7; }
+.innerPage > .primaryButton { margin-top: 18px; }
+.eyebrow { color: #279d32; font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; }
+
+.siteFooter { padding: 42px max(24px, calc((100vw - 1180px) / 2)) 22px; background: #06152d; color: #d9e3f2; }
+.footerGrid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footerGrid h3 { color: #fff; }
+.footerGrid a { display: block; margin-top: 8px; color: #aebbd0; }
+.copyright { margin-top: 30px; padding-top: 18px; border-top: 1px solid #ffffff1c; color: #91a2bd; font-size: 12px; }
+
+.loginPage { min-height: 100dvh; display: grid; place-items: center; padding: 24px; background: radial-gradient(circle at 80% 15%, #d8f3d6, transparent 28%), #f3f6fa; }
+.loginCard { width: min(510px, 100%); border: 1px solid var(--line); border-radius: 22px; padding: 30px; background: #fff; }
+.loginCard h1 { margin: 24px 0 6px; color: var(--navy); }
+.loginCard > p { color: var(--muted); }
+.backLink { color: #249d22; text-decoration: none; font-weight: 800; }
+.roleTabs { display: flex; gap: 8px; margin: 22px 0 18px; padding: 5px; border-radius: 12px; background: #eef2f7; }
+.roleTabs button { flex: 1; border: 0; border-radius: 9px; padding: 11px 7px; background: transparent; color: #526078; font-weight: 800; }
+.roleTabs button.active { background: #fff; color: var(--navy); }
+.loginField { display: grid; gap: 7px; margin-bottom: 14px; color: #344054; font-size: 12px; font-weight: 800; }
+.loginField input { width: 100%; border: 1px solid #dce2eb; border-radius: 10px; padding: 12px 13px; }
+.loginSubmit { width: 100%; margin-top: 8px; padding: 13px; }
+.roleNote { color: var(--muted); font-size: 11px; }
+
+@media (max-width: 680px) {
+  .siteHeader { height: 66px; padding-inline: 15px; }
+  .siteNav { display: none; }
+  .headerButton { margin-left: auto; font-size: 12px; }
+  .pageContent { width: min(100% - 30px, 1180px); }
+  .heroGrid { grid-template-columns: 1fr; min-height: auto; }
+  .heroSection { min-height: auto; }
+  .heroVisual { height: 190px; }
+  .visualCard { height: 150px; font-size: 40px; }
+  .visualCard:nth-child(2) { height: 190px; }
+  .businessGrid, .featureGrid { grid-template-columns: 1fr; }
+  .footerGrid { grid-template-columns: 1fr; }
+  .innerPage h1 { font-size: 32px; }
+}

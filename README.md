@@ -23,19 +23,28 @@ npm start
 ## Project structure
 
 ```text
-aptixon-nextjs/
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── public/
-│   ├── legacy/
-│   │   └── index.html
-│   ├── manifest.webmanifest
-│   └── sw.js
-├── next.config.mjs
-├── package.json
-└── tsconfig.json
+aptixon/
+├── app/                 # App Router routes and shared page styles
+├── components/pages/    # Reusable React page components
+├── components/legacy/   # Legacy prototype bridge components
+├── lib/
+│   ├── config/          # Shared application configuration
+│   ├── http/            # Route-level domain helpers
+│   ├── dal.ts           # Server data-access boundary
+│   ├── env.ts           # Environment variable access
+│   ├── errors.ts        # Shared application errors
+│   └── validations.ts   # Zod request schemas
+├── prisma/              # Database schema and migrations
+├── public/legacy/       # Existing UI migration bridge
+└── tests/               # Vitest and Playwright coverage
+```
+
+## Validation commands
+
+```bash
+npm run typecheck
+npm test
+npm run build
 ```
 
 ## Important implementation note

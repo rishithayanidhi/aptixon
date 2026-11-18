@@ -1,0 +1,37 @@
+.errorPage {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f5f7fb;
+}
+
+.errorPanel {
+  max-width: 480px;
+  text-align: center;
+  color: #667085;
+}
+
+.errorPanel h1 {
+  margin: 0 0 12px;
+  color: #071b3c;
+}
+
+.errorPanel p {
+  margin: 0 0 24px;
+}
+
+.errorAction {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: #35c928;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.errorLink {
+  color: #249d22;
+  font-weight: 800;
+}

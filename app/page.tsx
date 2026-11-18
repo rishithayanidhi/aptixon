@@ -1,13 +1,5 @@
-export default function HomePage() {
-  return (
-    <main className="prototype">
-      <iframe
-        title="Aptixon unified web platform"
-        src="/legacy/index.html"
-        className="prototypeFrame"
-        allow="camera; microphone; clipboard-read; clipboard-write"
-        loading="eager"
-      />
-    </main>
-  );
+import { HomePage } from "@/components/pages/Home";
+
+export default function Page() {
+  return <HomePage />;
 }
